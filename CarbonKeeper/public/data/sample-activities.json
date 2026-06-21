@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "timestamp": "2026-06-08T08:30:00Z",
+    "category": "transport",
+    "subCategory": "car",
+    "amount": 15,
+    "unit": "km",
+    "co2e": 2.55,
+    "equivalent": "= 318.8x charging a smartphone"
+  },
+  {
+    "id": "2",
+    "timestamp": "2026-06-08T12:00:00Z",
+    "category": "food",
+    "subCategory": "beef",
+    "amount": 0.2,
+    "unit": "kg",
+    "co2e": 5.4,
+    "equivalent": "= 9x a load of laundry"
+  },
+  {
+    "id": "3",
+    "timestamp": "2026-06-07T18:00:00Z",
+    "category": "energy",
+    "subCategory": "grid_avg",
+    "amount": 12,
+    "unit": "kWh",
+    "co2e": 4.8,
+    "equivalent": "= 8x a load of laundry"
+  }
+]

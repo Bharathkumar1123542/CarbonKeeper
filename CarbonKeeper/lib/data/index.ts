@@ -1,0 +1,7 @@
+export {
+  EMISSION_FACTORS,
+  REGION_GRID_FACTORS,
+  DEFAULT_REGION,
+  GRID_AVERAGE_KG_PER_KWH,
+  EMISSION_FACTOR_SOURCE,
+} from "./emissions-factors";
