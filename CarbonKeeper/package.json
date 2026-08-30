@@ -10,7 +10,12 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "build:lambda": "npm run build && npx open-next build",
+    "package:lambda": "cd .open-next/server-functions/default && powershell -Command \"Compress-Archive -Path '.\\*' -DestinationPath '..\\..\\function.zip' -Force\"",
+    "deploy:prepare": "npm run build:lambda && npm run package:lambda",
+    "deploy:lambda": "powershell -ExecutionPolicy Bypass -File ./deploy-lambda.ps1",
+    "deploy:assets": "powershell -ExecutionPolicy Bypass -File ./deploy-static-assets.ps1"
   },
   "dependencies": {
     "@google/genai": "^2.8.0",
@@ -26,6 +31,7 @@
     "zustand": "^5.0.14"
   },
   "devDependencies": {
+    "@opennextjs/aws": "^4.1.2",
     "@tailwindcss/postcss": "^4",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",

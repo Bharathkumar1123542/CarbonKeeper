@@ -3,12 +3,8 @@
 # dependencies
 /node_modules
 /.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+.pnp.js
+.yarn/install-state.gz
 
 # testing
 /coverage
@@ -16,6 +12,9 @@
 # next.js
 /.next/
 /out/
+
+# OpenNext build output
+/.open-next/
 
 # production
 /build
@@ -28,9 +27,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# local env files
+.env*.local
 .env
 
 # vercel
@@ -40,6 +39,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# swc cache
-/.swc/
-
+# AWS deployment
+function.zip
+*.zip
